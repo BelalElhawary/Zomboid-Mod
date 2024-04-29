@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "zomboid_mod",
+	"version": "${version}",
+	"name": "Zomboid",
+	"description": "This is a zomboid clone in minecraft!",
+	"authors": [
+		"Santrafysh!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/zomboid/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.santrafysh.zomboid.Zomboid"
+		],
+		"client": [
+			"com.santrafysh.zomboid.ZomboidClient"
+		],
+		"fabric-datagen": [
+			"com.santrafysh.zomboid.ZomboidDataGenerator"
+		]
+	},
+	"mixins": [
+		"zomboid.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.10",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
